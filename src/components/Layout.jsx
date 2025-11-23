@@ -23,6 +23,7 @@ import {
   Assessment as ReportsIcon,
   Settings as SettingsIcon,
   Notifications as NotificationsIcon,
+  ViewInAr as BlockViewerIcon,
 } from '@mui/icons-material';
 
 const drawerWidth = 240;
@@ -30,6 +31,7 @@ const drawerWidth = 240;
 const menuItems = [
   { text: 'Dashboard', icon: <DashboardIcon />, path: '/' },
   { text: 'Buildings', icon: <BuildingsIcon />, path: '/buildings' },
+  { text: 'Block Viewer', icon: <BlockViewerIcon />, path: '/block-viewer' },
   { text: 'Floor Viewer', icon: <FloorViewerIcon />, path: '/floor-viewer' },
   { text: 'Issues Log', icon: <IssuesIcon />, path: '/issues' },
   { text: 'Reports', icon: <ReportsIcon />, path: '/reports' },

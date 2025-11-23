@@ -12,8 +12,10 @@ import Layout from './components/Layout';
 const Dashboard = lazy(() => import('./components/Dashboard'));
 const Buildings = lazy(() => import('./components/Buildings'));
 const FloorViewer = lazy(() => import('./components/FloorViewer'));
+const BlockViewer = lazy(() => import('./components/BlockViewer'));
 const IssueLog = lazy(() => import('./components/IssueLog'));
 const Reports = lazy(() => import('./components/Reports'));
+const InteriorViewer = lazy(() => import('./components/InteriorViewer'));
 
 const theme = createTheme({
   palette: {
@@ -49,7 +51,9 @@ function App() {
               <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/buildings" element={<Buildings />} />
+                <Route path="/block-viewer" element={<BlockViewer />} />
                 <Route path="/floor-viewer" element={<FloorViewer />} />
+                <Route path="/interior-viewer" element={<InteriorViewer />} />
                 <Route path="/issues" element={<IssueLog />} />
                 <Route path="/reports" element={<Reports />} />
               </Routes>
