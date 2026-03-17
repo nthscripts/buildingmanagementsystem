@@ -13,7 +13,7 @@ const BlockViewer = ({ floorCount, onSelect }) => {
   const [hoverIndex, setHoverIndex] = useState(null);
   const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
   const navigate = useNavigate();
-  const baseSrc = `../images/ABlock_BlockView0010000.jpg`;
+  const baseSrc = `../images/ABlock_BlockView001_Day.jpg`;
   const maskSrc = `../images/ABlock_BlockView001_Mask0000.png`;
 
   useEffect(() => {
@@ -173,7 +173,14 @@ const BlockViewer = ({ floorCount, onSelect }) => {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box
+      sx={{
+        width: '100%',
+        height: { xs: 'calc(100vh - 64px - 32px)', sm: 'calc(100vh - 64px - 48px)' },
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
       <Typography variant="subtitle1" gutterBottom>Block Viewer</Typography>
       <Box
         ref={containerRef}
@@ -183,7 +190,8 @@ const BlockViewer = ({ floorCount, onSelect }) => {
         sx={{
           position: 'relative',
           width: '100%',
-          height: '100vh',
+          flex: 1,
+          minHeight: 0,
           borderRadius: 1,
           overflow: 'hidden',
           cursor: 'pointer'
