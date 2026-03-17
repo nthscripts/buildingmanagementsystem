@@ -3,7 +3,7 @@ import { Box, Slider, Typography } from '@mui/material';
 
 export const PlumbingFloorPlan = () => {
   const [imageError, setImageError] = React.useState(false);
-  const [brightness, setBrightness] = React.useState(1.2);
+  const [brightness, setBrightness] = React.useState(1.0);
   const [contrast, setContrast] = React.useState(0.1);
 
   const handleImageError = () => {
@@ -26,7 +26,7 @@ export const PlumbingFloorPlan = () => {
         <Slider
           value={brightness}
           onChange={handleBrightnessChange}
-          min={0.5}
+          min={0.1}
           max={2}
           step={0.1}
           sx={{ width: 120 }}
@@ -35,7 +35,7 @@ export const PlumbingFloorPlan = () => {
         <Slider
           value={contrast}
           onChange={handleContrastChange}
-          min={0}
+          min={0.1}
           max={0.5}
           step={0.05}
           sx={{ width: 120 }}
@@ -82,7 +82,7 @@ export const PlumbingFloorPlan = () => {
         height="100%"
         alt="glowing"
         style={{
-          filter: 'drop-shadow(0 0 5px blue)', // creates a glow effect
+          filter: 'drop-shadow(0 0 5px blue)',// creates a glow effect
           transition: 'filter 0.1s ease-in-out'
         }}
         preserveAspectRatio="xMidYMid meet"

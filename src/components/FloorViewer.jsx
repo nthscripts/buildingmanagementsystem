@@ -35,6 +35,7 @@ import { useState, useEffect } from 'react';
 import { buildingsData } from './Buildings';
 import { PlumbingFloorPlan } from '../assets/PlumbingFloorPlan';
 import ModelViewer from './ModelViewer';
+ 
 
 const buildingFloorData = {
   1: [  // Main Office Building
@@ -201,9 +202,9 @@ const FloorViewer = ({ buildingId: propBuildingId }) => {
   };
 
   const systemColors = {
-    water: '#0066cc',
-    electrical: '#cc0000',
-    hvac: '#00cc00'
+    water: '#2563EB',
+    electrical: '#DC2626',
+    hvac: '#16A34A'
   };
 
   const renderPerspectiveView = () => {
@@ -378,7 +379,7 @@ const FloorViewer = ({ buildingId: propBuildingId }) => {
             fullWidth={false}
             sx={{ minWidth: { xs: '100%', sm: 'auto' } }}
           >
-            View 3D Model
+            3D View
           </Button>
           <ModelViewer
             open={modelViewerOpen}
@@ -441,15 +442,15 @@ const FloorViewer = ({ buildingId: propBuildingId }) => {
               sx={{ width: '100%' }}
             >
               <ToggleButton value="water" aria-label="water system" sx={{ justifyContent: 'flex-start', py: 1 }}>
-                <PlumbingIcon sx={{ mr: 1, color: '#0066cc' }} />
+                <PlumbingIcon sx={{ mr: 1, color: systemColors.water }} />
                 Water System
               </ToggleButton>
               <ToggleButton value="electrical" aria-label="electrical system" sx={{ justifyContent: 'flex-start', py: 1 }}>
-                <ElectricalIcon sx={{ mr: 1, color: '#cc0000' }} />
+                <ElectricalIcon sx={{ mr: 1, color: systemColors.electrical }} />
                 Electrical System
               </ToggleButton>
               <ToggleButton value="hvac" aria-label="hvac system" sx={{ justifyContent: 'flex-start', py: 1 }}>
-                <HvacIcon sx={{ mr: 1, color: '#00cc00' }} />
+                <HvacIcon sx={{ mr: 1, color: systemColors.hvac }} />
                 HVAC System
               </ToggleButton>
             </ToggleButtonGroup>
