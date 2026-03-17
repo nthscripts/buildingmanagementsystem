@@ -24,6 +24,7 @@ const DragLookControls = () => {
   useEffect(() => {
     camera.position.set(0, 0, 0.01);
     camera.rotation.order = 'YXZ';
+    camera.rotation.set(0, -30, 0);
     const dom = gl.domElement;
     const onDown = (e) => {
       if (e.button !== 0) return;
